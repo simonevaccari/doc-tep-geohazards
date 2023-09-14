@@ -34,15 +34,13 @@ This tutorial describes a step-by-step procedure to submit a job for SNAPPING Se
 
 The tutorial is addressed to users already familiar with basic InSAR principles and products and gives some hints and recommendations for the best user experience.
 
-
 There are three processing steps (i.e. three jobs) for the SNAPPING execution:
 
 - **on-demand interferogram (IFG) pairs service**: for the generation of the EO interferometric product pairs;
 - **Coordinator**: for computing the Sentinel-1 interferograms Stack, automatically triggered when the IFG pairs have been created and are available in the "Queued" sub-menu of the Stack associated with a successful IFG job;
-- **PSI**: for processing the interferograms to generate the multi-temporal time series analysis for the retrieval of the surface motion measurements, available both at medium and full sensor resolutions.
+- **PSI**: for processing the interferograms to undertake the multi-temporal time series analysis for the retrieval of the surface motion measurements, available both at medium and full sensor resolutions.
 
-Note that both SNAPPING IFG and PSI services **should be run subsequently** . Following the completion of SNAPPING IFG the user may run SNAPPING PSI Med or SNAPPING PSI Full depending on the output required. 
-
+**NOTE**: when an **IFG** step completes as "Success", the items (product pairs) are successfully created ("Queued"). Only after an **IFG** step completes successfully, the **Coordinator** step starts automatically by creating a job that takes as input the “Queued” pairs created by the **IFG** step. Following the completion of the **Coordinator**, the user may run the PSI at medium of full resolution, depending on the output required. 
 
 .. figure:: assets/snapping_2.png
 	:figclass: align-center
