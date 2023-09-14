@@ -36,11 +36,11 @@ The tutorial is addressed to users already familiar with basic InSAR principles 
 
 There are three processing steps (i.e. three jobs) for the SNAPPING execution:
 
-1) **on-demand interferogram (IFG) pairs service**: for the generation of the EO interferometric product pairs;
-2) **Coordinator**: for computing the Sentinel-1 interferograms Stack, automatically triggered when the IFG pairs have been created and are available in the "Queued" sub-menu of the Stack associated with a successful IFG job;
-3) **PSI**: for processing the interferograms to undertake the multi-temporal time series analysis for the retrieval of the surface motion measurements, available both at medium and full sensor resolutions.
+1) **on-demand interferogram (IFG) pairs service**: job for the generation of the EO interferometric product pairs;
+2) **Coordinator**: job for computing the Sentinel-1 interferograms Stack, automatically triggered when the IFG pairs have been created and are available in the "Queued" sub-menu of the Stack associated with a successful IFG job;
+3) **PSI**: job for processing the interferograms to undertake the multi-temporal time series analysis for the retrieval of the surface motion measurements, available both at medium and full sensor resolutions.
 
-.. NOTE:: When an **IFG** step completes as "Success", the items (product pairs) are successfully created ("Queued"). Only after an **IFG** step completes successfully, the **Coordinator** step starts automatically by creating a job that takes as input the “Queued” pairs created by the **IFG** step. Following the completion of the **Coordinator**, the user may run the **PSI** at medium of full resolution, depending on the output required. 
+.. NOTE:: When an **IFG** job completes as "Success", the items (product pairs) are successfully created ("Queued"). Only after an **IFG** job completes successfully, the **Coordinator** step starts automatically by creating a job that takes as input the “Queued” pairs created by the **IFG** job. The user can check the status of the **Coordinator** job by checking the status of the created interferograms. When all the interferograms are successfully created and set as "Done", the user may run the **PSI** at medium of full resolution, depending on the output required. 
 
 .. figure:: assets/snapping_2.png
 	:figclass: align-center
